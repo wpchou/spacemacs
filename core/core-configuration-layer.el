@@ -1950,6 +1950,8 @@ RNAME is the name symbol of another existing layer."
                       (car (oref pkg :owners)))))
             (when dir
               (add-to-list 'load-path dir)))
+          (add-to-list 'load-path "~/Desktop/org-mode/lisp")
+          (add-to-list 'load-path "~/Desktop/org-mode/contrib/lisp")
           ;; configuration
           (unless (memq (oref pkg :location) '(local site built-in))
             (configuration-layer//activate-package pkg-name))
